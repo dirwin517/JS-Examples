@@ -3,9 +3,9 @@ First off Q has many implimentations ( AngularJS, Q for nodejs, etc )
 Lets say you have your add function
 
     function add(v1, v2){
-        var result = new Promise(function(result, reject){
+        var result = new Promise(function(resolve, reject){
             setTimeout(function(){
-                result(v1 + v2);
+                resolve(v1 + v2);
             }, 0);
         });
         return result;
