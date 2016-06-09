@@ -17,17 +17,17 @@ and you want to add a bunch of numbers, but then add those!?
 
 But HOW?! ( Not like this )
 
-   add(1, 1).then(function(result){
-      return add(2,2).then(function(r2){
+    add(1, 1).then(function(result){
+       return add(2,2).then(function(r2){
         return add(r2, result);
       });
-   }).then(function(result2){
-     return add(3,3).then(function(r3){
-       return add(r3, result2);
-     });
-   }).then(function(){
-         console.log('result:', result2);
-   });
+    }).then(function(result2){
+      return add(3,3).then(function(r3){
+        return add(r3, result2);
+      });
+    }).then(function(){
+      console.log('result:', result2);
+    });
 
 That's far too messy ( and not efficient, those aren't all truly dependent on each other in series )
 
